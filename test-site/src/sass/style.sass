@@ -1,0 +1,252 @@
+*
+    box-sizing: border-box
+@mixin button-click
+    margin-bottom: 30px
+    border-style: none
+    background-color: #dadada
+    border-radius: 5px
+    height: 30px
+@mixin tumbler
+    .switch 
+        position: relative
+        display: inline-block
+        width: 48px
+        height: 28px
+    .switch input 
+        opacity: 0
+        width: 0
+        height: 0
+    .slider 
+        position: absolute
+        cursor: pointer
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: #ccc
+        -webkit-transition: .3s
+        transition: .3s
+    .slider:before 
+        position: absolute
+        content: ""
+        height: 20px
+        width: 20px
+        left: 3px
+        bottom: 4px
+        background-color: white
+        -webkit-transition: .3s
+        transition: .3s
+    input:checked + .slider 
+        background-color: #2196F3
+    input:focus + .slider 
+        box-shadow: 0 0 1px #2196F3
+    input:checked + .slider:before 
+        -webkit-transform: translateX(20px)
+        -ms-transform: translateX(20px)
+        transform: translateX(20px)
+    .slider.round 
+        border-radius: 34px
+    .slider.round:before 
+        border-radius: 50%
+
+
+
+    
+body
+    margin: 0
+.conteiner
+    position: relative
+    margin: 0 auto
+    width: 1040px
+    
+.conteiner2
+    position: relative
+    margin: 0 auto
+    width: 1040px
+    display: flex
+    flex-direction: row
+
+    
+.section
+    &__h1
+        font-weight: 400
+        padding-top: 100px
+        font-size: 52px
+    &__some-text
+        padding-top: 10px
+        margin-bottom: 50px
+        font-weight: lighter
+        font-size: 20px
+    &__emogi
+        width: 30px
+        height: 30px
+.left-wrapper
+    &__polygon
+        display: flex
+        flex-direction: row
+    &__polygon-img
+        height: 12px
+        padding-top: 5px
+        margin-top: 15px
+        margin-left: 15px
+    &__text1
+        margin-bottom: 30px
+        font-weight: bolder
+        font-size: 15px
+    &__text2
+        margin-bottom: 70px
+    &__text3
+        margin-bottom: 40px
+    &__text4
+        margin: 0
+        margin-bottom: 10px
+    &__text5
+        color: #5C5C5C
+        margin: 0
+        font-size: 14px
+    &__text6
+        color: #2c2b2b
+        font-weight: 700
+    &__text7
+        color: blue
+        text-decoration: none
+    &__text9
+        padding-top: 10px
+        color: #000000
+        font-weight: 700
+    &__text21
+        padding-top: 10px
+        margin-bottom: 70px
+    &__text23
+        color: #000000
+        font-weight: 700
+    &__button1
+        margin-bottom: 30px
+        border-style: none
+        background-color: #dadada
+        border-radius: 5px
+        height: 30px
+        margin-right: 10px
+        &:last-child
+            margin: 0
+    &__button2
+        @include button-click
+        margin-right: 117px
+    &__button3
+        @include button-click
+        margin-right: 77px
+.right-wrapper
+    position: relative
+    margin-left: 150px
+    &__btn-margin
+        
+        margin-left: 50px
+    &__buttons-conteiner
+        margin-top: 50px
+        display: flex
+        flex-direction: row
+    &__text10
+        margin: 0
+        margin-left: 50px
+    &__text11
+        margin: 0
+        margin-left: 50px
+    &__buttons-conteiner2
+        margin-top: 47px
+        display: flex
+        flex-direction: row
+    &__buttons-conteiner3
+        margin-top: 17px
+        display: flex
+        flex-direction: row
+        margin-bottom: 104px
+    &__buttons-conteiner4
+        padding-top: 120px
+        display: flex
+        flex-direction: row
+    &__buttons-conteiner5
+        padding-top: 30px
+        margin-bottom: 67px
+    &__buttons-conteiner6
+        margin-bottom: 67px
+    &__buttons-conteiner8
+        padding-top: 67px
+        display: flex
+        flex-direction: row
+    &__buttons-conteiner10
+        padding-top: 17px
+        display: flex
+        flex-direction: row
+    &__buttons-conteiner11
+        padding-top: 87px
+.last-section
+    height: 500px
+    &__btn11
+        margin-right: 50px
+        margin-top: 45px
+        text-align: center;
+        line-height: initial
+        border-radius: 10px
+        width: 200px
+        border-style: none
+        height: 40px
+        background-color: #DDEEF0
+    &__text31
+        margin: 0
+        color: #0071db
+    &__text32
+        color: #ffffff
+        margin: 0
+
+
+@include tumbler
+.btn-group
+    margin-left: 50px
+    background-color: #dadada
+    margin-top: -4px
+
+.popup:target
+    opacity: 1
+    visibility: visible
+.popup
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: #000000c4
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    &__body
+        min-height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 30px 10px
+    &__content
+        position: relative
+        background-color: #ffc8d7
+        color: black
+        max-width: 800px
+        padding: 30px
+    &__close
+        position: absolute
+        top: 10px
+        right: 10px
+        font-size: 20px
+        color: black
+        text-decoration: none
+
+    &__title
+        font-size: 40px
+        font-weight: 500
+        margin: 0px 0px 1em 0px
+    &__text
+        
+
+.head
+    position: fixed
+
+@media ( max-width:575px)
+    .conteiner
+        width: 330px
